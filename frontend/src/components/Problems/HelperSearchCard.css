@@ -1,0 +1,96 @@
+.helperSearchCard {
+    border: 1px solid #ddd;
+    width: 90%;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 8px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .helperSearchCardContent {
+    display: flex;
+    align-items: center;
+  }
+  .requestButton{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+  }
+  .requestButton > button{
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  .helperSearchCardContent{
+    width: 100%;
+  }
+  
+  .helperSearchCardAvatar {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 16px;
+  }
+  
+  .helperSearchCardDetails {
+    flex: 1;
+  }
+  
+  .helperSearchCardName {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .helperSearchCardName:hover {
+    text-decoration: underline;
+  }
+  
+  .helperSearchCardRating {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+  }
+  
+  .star {
+    color: #ffbc00;
+    margin-right: 2px;
+  }
+  
+  .star.filled {
+    color: #ffbc00;
+  }
+  
+  .helperSearchCardLocation {
+    color: #777;
+  }
+  
+  .helperSearchCardSkills {
+    margin-top: 8px;
+  }
+  
+  .helperSearchCardSkillButton {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 6px 12px;
+    margin: 2px;
+    font-size: 14px;
+    color: #333;
+    cursor: default; /* To show as non-clickable button */
+  }
+  
+  .helperSearchCardSkillButton:hover {
+    background-color: #e0e0e0;
+  }
+  

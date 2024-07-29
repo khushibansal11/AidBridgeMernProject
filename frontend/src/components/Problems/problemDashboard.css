@@ -1,0 +1,84 @@
+.problemDashboardContainer {
+  width: 100%;
+  height: 100vh;
+}
+
+.problemDashboardContainer h2, .problemDashboardContainer h4 {
+  padding: 2vmax 4vmax 0.8vmax 5vmax;
+  font-family: "Lora";
+}
+
+.circleIndicators {
+  display: flex;
+  justify-content: space-around;
+  margin: 3vmax 2vmax 0vmax 2vmax;
+}
+
+.circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circleContent {
+  width: 67px;
+    height: 67px;
+  border-radius: 50%;
+  border: 2px solid; /* Adjust color as needed */
+  color: rgb(14, 14, 14);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.circleLabel {
+  margin-top: 0.5vmax;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.activeProblems, .resolvedProblems {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1vmax;
+}
+
+.dashboardIcon {
+  position: absolute;
+  margin-left: -27px;
+}
+
+@media only screen and (max-width: 850px) {
+  .circleContent{
+    width: 48px;
+    height: 48px;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .activeProblems{
+    margin-top: 2vmax;
+  }
+  .problemAction{
+    justify-content: center;
+  }
+  .problemContainer {
+    padding: 4px 10px;
+}
+.actionIcon{
+  width: 20px !important;
+}
+.problemDashboardContainer h2, .problemDashboardContainer h4  {
+  padding: 5vmax 4vmax 2.8vmax 5vmax;
+  font-family: "Lora";
+}
+}
+@media only screen and (max-width: 400px) {
+  .circleContent{
+    border: 1px solid;
+    width: 45px;
+    height: 45px;
+  }
+}

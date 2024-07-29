@@ -1,0 +1,52 @@
+.applications {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .applicationContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .application-name:hover{
+    text-decoration: underline;
+  }
+  
+  .application-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    width: 80%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .application-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  
+  .application-details {
+    flex: 1;
+  }
+  
+  .application-skills {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .application-skill {
+    background: #f0f0f0;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
+  }
+  .application-box p{
+    margin: 4px 0px;
+  }

@@ -1,0 +1,49 @@
+
+.completeProfileContainer {
+    background-image: url(../../images/background.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+
+}
+.frontImg{
+    background: #70c8bb;
+    width: 23%;
+    align-items: center;
+    border-radius: 8px 0px 0px 8px;
+    display: flex;
+}
+.frontImg img{
+    width: 100%;
+}
+.getLocationBtn > button{
+    background-color: #d04444;
+    border: none;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+.completeProfileBox {
+    background-color: #fff;
+    padding: 1rem 2rem;
+    /* border-radius: 0px 8px 8px 0px ; */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 300px;
+}
+.completeProfileForm h2{
+    justify-content: center;
+    margin-bottom: 21px;
+    font-family: Lora;
+}

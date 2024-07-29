@@ -1,0 +1,98 @@
+.problemCard {
+  width: 80%;
+  background-color: #efefef;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  font-family: Noto Sans
+}
+
+.problemCard:hover {
+  transform: scale(1.02);
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 5px;
+}
+
+.actions span {
+  cursor: pointer;
+  margin-left: 10px;
+  color: #0d0e0f;
+}
+
+.actions span:hover {
+  text-decoration: underline;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #000;
+}
+
+.problemContainer{
+  padding: 4px 20px;
+}
+
+.problem, .preferredSkills, .createdAt, .status {
+  margin-top: 9px;
+}
+
+.problem > h3, .preferredSkills h5, .createdAt h5, .status h5 {
+  font-family: "Poppins";
+  margin: 0;
+  font-weight: 600;
+}
+
+.problem p, .createdAt p, .status p {
+  font-size: 13px;
+}
+
+.skillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.skill {
+  padding: 5px 14px;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    background-color: #e7f3ff;
+    font-size: 13px;
+}    
+
+.problemAction{
+  display: flex;
+    justify-content: flex-end;
+    gap: 7px;
+}
+
+.statusButton, .searchButton {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.statusButton:hover, .searchButton:hover {
+  background-color: #0056b3;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+}
+
+.status h5 {
+  margin-right: 5px;
+}

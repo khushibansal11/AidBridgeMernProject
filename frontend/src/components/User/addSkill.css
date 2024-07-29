@@ -1,0 +1,81 @@
+/* src/components/RegisterLogin/RegisterLogin.css */
+
+.skillButton {
+    padding: 10px 20px;
+    margin: 5px;
+    border: 2px solid #007bff;
+    border-radius: 20px;
+    background-color: #f8f9fa;
+    color: #007bff;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .skillButton.selected {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .skillButton:hover {
+    background-color: #0056b3;
+    color: #fff;
+  }
+  
+  .registerLoginContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa;
+  }
+  
+  .frontImg img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .registerLoginBox {
+    width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+  }
+  
+  .registerForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .registerForm h2 {
+    margin-bottom: 20px;
+  }
+  
+  .addSkillFormGroup {
+    width: 100%;
+    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .addSkillFormGroup select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .addSkillFormGroup input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .addSkillFormGroup input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  

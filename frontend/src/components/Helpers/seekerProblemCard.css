@@ -1,0 +1,87 @@
+.seekerProblemCard {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+ .searchProblemImg {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0px 28px 0px 15px;
+  }
+  
+  .problemDetails {
+    flex: 1;
+  }
+  
+  .seekerName {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .seekerName:hover {
+    text-decoration: underline;
+  }
+  
+  .location {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+  }
+  
+  .locationIcon {
+    margin-right: 5px;
+  }
+  
+  .problemDescription {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .preferredSkillsBox {
+    margin-top: 10px;
+  }
+  
+  .preferredSkills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 5px;
+  }
+  
+  .skillItem {
+    background-color: #e0e0e0;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 14px;
+  }
+  
+  .applyButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .applyButton:hover {
+    background-color: #0056b3;
+  }
+  .applyBtnContainer{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 25px;
+  }

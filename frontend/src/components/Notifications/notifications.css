@@ -1,0 +1,66 @@
+/* .main {
+    display: flex;
+  } */
+  
+  .notificationsContent {
+    flex-grow: 1;
+    padding: 20px;
+  }
+  
+  .notification-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    gap: 10px;
+  }
+  
+  .notification-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .btn-chat, .btn-decline {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-chat {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .btn-decline {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .notification-time {
+    display: block;
+    font-size: 0.9em;
+    color: #888;
+    margin-top: 5px;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .btn-decline ,.btn-chat {
+      padding: 7px 10px !important;
+    }
+    .notification-box >p{
+      font-size: 12px;
+    }
+}
+  @media only screen and (max-width: 350px) {
+    .btn-decline, .btn-chat {
+      padding: 3px 5px !important;
+  }
+}
+
+
+  

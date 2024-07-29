@@ -1,0 +1,38 @@
+.about-container {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Mukta', sans-serif;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .about-container h1,
+  .about-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007bff;
+    font-family: Lora;
+  }
+  
+  .about-container p {
+    margin-bottom: 20px;
+    font-family: Droid Sans;
+  }
+  
+  .about-container ol,
+  .about-container ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+  }
+  
+  .about-container li {
+    margin-bottom: 10px;
+  }
+  
+  .about-container ol li strong,
+  .about-container ul li strong {
+    color: #007bff;
+    font-family: Mukta;
+  }
+  

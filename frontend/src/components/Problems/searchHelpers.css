@@ -1,0 +1,6 @@
+.searchHelpersContent {
+    padding: 34px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }

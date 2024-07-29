@@ -1,0 +1,128 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.registerLoginContainer {
+    background-image: url(../../images/background.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+.frontImg{
+    background: #70c8bb;
+    width: 23%;
+    align-items: center;
+    border-radius: 8px 0px 0px 8px;
+    display: flex;
+}
+.frontImg img{
+    width: 100%;
+}
+.registerLoginBox {
+    background-color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 0px 8px 8px 0px ;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 300px;
+}
+.registerForm, .loginForm{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.loginForm Form{
+    width: 100%;
+}
+
+.registerLoginBox h2 , .loginForm h2{
+    justify-content: center;
+    margin-bottom: 21px;
+    font-family: Lora;
+}
+
+/* .registerName, .loginName {
+    text-align: center;
+    color: #333;
+} */
+
+.formGroup {
+    display: flex;
+    margin-bottom: 1rem;
+}
+.icon{
+    color: #6a6868;
+    position: absolute;
+    margin: 5px;
+}
+
+.formGroup input, .formGroup select {
+    outline: none;
+    width: 94%;
+    padding: 0.5rem 33px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: Droid Sans;
+}
+
+.registerAvatar img{
+    width: 32px;
+}
+.registerAvatar{
+    display: flex;
+}
+
+.formGroup input[type="file"] {
+    padding: 0.3rem;
+}
+
+.formGroup input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formGroup input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.formGroup a {
+    display: block;
+    text-align: center;
+    color: #007bff;
+    text-decoration: none;
+}
+.changeForm button{
+    background: none;
+    color: #007bff;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+} 
+.changeForm{
+    justify-content: center;
+}
+.formGroup a:hover {
+    text-decoration: underline;
+}
+.registerForgot{
+    justify-content: end;
+    font-size: 13px;
+}
+@media screen and (max-width: 350px) {
+    .registerLoginContainer{
+        align-items: end;
+        height: 72vh;
+    }
+    .registerLoginBox {
+        border-radius: 8px 8px 0px 0px;
+        box-shadow: none;
+    }
+}

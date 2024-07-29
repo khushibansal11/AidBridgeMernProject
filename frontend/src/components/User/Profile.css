@@ -1,0 +1,159 @@
+.main{
+  margin-left: 262px;
+}
+
+.profile{
+  height: 100vh;
+  width: 100%;
+}
+
+.profileContainer{
+  display: flex;
+  flex-direction: column;
+  padding: 0vmax 6vmax;
+}
+.numReviews{
+  font-size: 11px;
+    position: absolute;
+    margin-top: 9px;
+}
+.profileDetailBox {
+  padding: 44px 0 0 0;
+  display: flex;
+  width: 100%;
+  /* height: 24vmax; */
+    
+  }
+  .avatar{
+    width: 40%;
+  }
+  .avatar > div{
+    width: 14vmax;
+    border-radius: 50%;
+    height: 14vmax;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+  }
+  .avatar img{
+    width: 100%;
+  }
+  .details{
+    width: 100%;
+    margin: 3px 46px;
+    padding-left: 6px;
+  }
+  .details .name{
+    color: black;
+    font-family: Droid sans-serif;
+    font-size: 30px;
+    display: inline;
+  margin-bottom: 0px;
+  }
+  .details .role{
+    font-size: 19px;
+    color: rgb(44, 42, 42);
+  }
+  .location{
+    margin-top: 1.5vmax;
+    color: rgb(96, 96, 96);
+    display: flex;
+  }
+  .profileData > .icon {
+    color: rgb(110, 108, 108);
+    width: 23px;
+    position: relative;
+    margin: 0px 2px 0px 0px;
+  }
+  .profileData{
+    margin-top: 0.5vmax;
+    color: rgb(96, 96, 96);
+    display: flex;
+  }
+  .updateButtons{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 3vmax;
+  }
+  .updateButtons .link{
+    background-color: rgb(15, 86, 228);
+    color: white;
+    padding: 1vmax;
+    border-radius: 10px;
+    border: none;
+    text-decoration: none;
+  }
+  .sectionHeading{
+    margin-top: 4vmax;
+    font-size: 30px;
+  }
+  .profileSkillsList {
+    margin-top: 2vmax;
+  }
+  
+  .profileSkillItem {
+    background-color: rgb(189, 219, 202);
+    padding: 1vmax;
+    margin: 0.5vmax 0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .skillName {
+    font-weight: bold;
+  }
+  
+  .availability {
+    margin-top: 2vmax;
+    font-size: 1em;
+  }
+  .submitDialog {
+    display: flex;
+    flex-direction: column;
+  }
+  .submitDialogTextArea {
+    border: 1px solid rgba(0, 0, 0, 0.082);
+    margin: 1vmax 0;
+    outline: none;
+    padding: 1rem;
+    font: 300 1rem "Roboto";
+  }
+
+  @media only screen and (max-width: 750px) {
+    .problemCard{
+      padding: 3px;
+    }
+    .problem{
+      margin-top: 0px !important;
+    }
+    .preferredSkills{
+      margin-top: 2px !important;
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    .updateButtons .link {
+      font-size: 11px;
+  }
+  .profileContainer{
+    padding: 0px 3vmax
+  }
+  .problemCard{
+    padding: 0px;
+  }
+}
+  @media only screen and (max-width: 500px) {
+    .updateButtons .link {
+      font-size: 11px;
+  }
+  .profileContainer{
+    padding: 0px 3vmax
+  }
+  .problemCard{
+    width: 92%;
+  }
+}
+
