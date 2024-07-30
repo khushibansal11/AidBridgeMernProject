@@ -10,6 +10,15 @@ if (process.env.NODE_ENV !== "PRODUCTION") {
   require("dotenv").config({ path: "backend/config/config.env" });
 }
 
+// CORS configuration
+const corsOptions = {
+  origin: "https://aidbridgemernproject-frontend.onrender.com",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
+
 app.use(express.json({ limit: "50mb" })); 
 app.use(cookieParser());
 app.use(express.urlencoded({ limit: "50mb", extended: true }));
