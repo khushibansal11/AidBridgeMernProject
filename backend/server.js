@@ -32,8 +32,9 @@ const server = http.createServer(app);
 // Initialize Socket.IO
 const io = socketIo(server, {
     cors: {
-        origin: "*",
-        methods: ["GET", "POST"]
+        origin: "https://aidbridgemernproject-frontend.onrender.com",
+        methods: ["GET", "POST", "PUT", "DELETE"],
+        credentials: true
     }
 });
 

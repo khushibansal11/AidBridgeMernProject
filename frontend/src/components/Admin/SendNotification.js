@@ -14,7 +14,8 @@ const SendNotification = () => {
         e.preventDefault();
 
         try {
-            const response = await axios.post('/api/v1/admin/notifications', {
+            const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "http://localhost:4000";
+            const response = await axios.post(`${BACKEND_URL}/api/v1/admin/notifications`, {
                 message,
                 userIds: notificationType !== 'allHelpers' && notificationType !== 'allSeekers' && notificationType !== 'allUsers' ? userIds.split(',').map(id => id.trim()) : [],
                 type: notificationType,
