@@ -3,6 +3,7 @@ const app=express();
 const cookieParser = require('cookie-parser');
 const fileUpload = require("express-fileupload");
 const errorMiddleware = require("./middleware/error");
+//const path = require("path")
 // const path = require("path")
 
 // Config
@@ -25,10 +26,10 @@ app.use("/api/v1", user);
 app.use("/api/v1", chat);
 app.use("/api/v1", contact);
 
-// app.use(express.static(path.join(__dirname, "../frontend/build")));
-// app.get("*", (req, res) => {
-//   res.sendFile(path.resolve(__dirname, "../frontend/build/index.html"));
-// });
+//app.use(express.static(path.join(__dirname, "../frontend/build")));
+//app.get("*", (req, res) => {
+//  res.sendFile(path.resolve(__dirname, "../frontend/build/index.html"));
+//});
 
 //Middleware for errors
 app.use(errorMiddleware);
