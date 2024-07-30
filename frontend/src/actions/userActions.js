@@ -89,7 +89,7 @@ export const register = (userData) => async (dispatch) => {
       dispatch({ type: REGISTER_REQUEST });
       const config = { headers: { "Content-Type": "multipart/form-data" } };
       
-      const { data } = await axios.post(`/api/v1/register`, userData, config);
+      const { data } = await api.post(`/api/v1/register`, userData, config);
   
       dispatch({ type: REGISTER_SUCCESS, payload: data.user });
     } catch (error) {
@@ -111,7 +111,7 @@ export const login = (email,password)=>async(dispatch)=>{
         });
         const config = { headers: { "Content-Type": "application/json" } };
 
-        const { data } = await axios.post(
+        const { data } = await api.post(
         `/api/v1/login`,
         { email, password },
         config
@@ -134,7 +134,7 @@ export const loadUser = ()=>async(dispatch)=>{
       dispatch({
           type:LOAD_USER_REQUEST
       });
-      const { data } = await axios.get(`/api/v1/me`);
+      const { data } = await api.get(`/api/v1/me`);
 
   dispatch({ type: LOAD_USER_SUCCESS, payload: data.user });
 
@@ -151,7 +151,7 @@ export const loadOtherUser = (id)=>async(dispatch)=>{
       dispatch({
           type:LOAD_OTHER_USER_REQUEST
       });
-      const { data } = await axios.get(`/api/v1/user/${id}`);
+      const { data } = await api.get(`/api/v1/user/${id}`);
 
   dispatch({ type: LOAD_OTHER_USER_SUCCESS, payload: data.user });
 
@@ -168,7 +168,7 @@ export const loadOtherUser = (id)=>async(dispatch)=>{
 //Logout
 export const logout = ()=>async(dispatch)=>{
   try{
-      await axios.get(`/api/v1/logout`);
+      await api.get(`/api/v1/logout`);
 
   dispatch({ type: LOGOUT_SUCCESS});
 
@@ -188,7 +188,7 @@ export const completeProfile = (userData) => async (dispatch) => {
     dispatch({ type: COMPLETE_PROFILE_REQUEST });
     const config = { headers: { "Content-Type": "multipart/form-data" } };
     
-    const {data}=await axios.post(`/api/v1/profile/complete`, userData, config);
+    const {data}=await api.post(`/api/v1/profile/complete`, userData, config);
 
     dispatch({ type: COMPLETE_PROFILE_SUCCESS, payload: data.user });
   } catch (error) {
@@ -207,7 +207,7 @@ export const updateProfile = (userData) => async (dispatch) => {
     dispatch({ type: UPDATE_PROFILE_REQUEST });
     const config = { headers: { "Content-Type": "application/json" } };
     
-    const {data}= await axios.put(`/api/v1/me/update`, userData, config);
+    const {data}= await api.put(`/api/v1/me/update`, userData, config);
 
     dispatch({ type: UPDATE_PROFILE_SUCCESS ,payload: data.success });
     dispatch(loadUser())
@@ -227,7 +227,7 @@ export const forgotPassword = (email)=>async(dispatch)=>{
       dispatch({ type:FORGOT_PASSWORD_REQUEST });
       const config = { headers: { "Content-Type": "multipart/form-data" } };
 
-      const { data } = await axios.post( `/api/v1/password/forgot`, email,config );
+      const { data } = await api.post( `/api/v1/password/forgot`, email,config );
 
   dispatch({ type: FORGOT_PASSWORD_SUCCESS, payload: data.message });
   }catch(error){
@@ -247,7 +247,7 @@ export const resetPassword = (token, passwords) => async (dispatch) => {
 
     const config = { headers: { "Content-Type": "multipart/form-data" } };
 
-    const { data } = await axios.put(
+    const { data } = await api.put(
       `/api/v1/password/reset/${token}`,
       passwords,
       config
@@ -270,7 +270,7 @@ export const changePassword = (oldPassword,newPassword,confirmPassword)=>async(d
     dispatch({ type: CHANGE_PASSWORD_REQUEST });
     const config = { headers: { "Content-Type": "multipart/form-data" } };
 
-      const {data}=await axios.put(`/api/v1/password/update`,{oldPassword,newPassword,confirmPassword},config);
+      const {data}=await api.put(`/api/v1/password/update`,{oldPassword,newPassword,confirmPassword},config);
 
   dispatch({ type: CHANGE_PASSWORD_SUCCESS,payload: data.message});
 
@@ -290,7 +290,7 @@ export const createProblem = (problem,preferredHelperSkills) => async (dispatch)
     dispatch({ type: CREATE_PROBLEM_REQUEST });
     const config = { headers: { "Content-Type": "application/json" } };
     
-    const {data}= await axios.put(`/api/v1/problem`, {problem,preferredHelperSkills}, config);
+    const {data}= await api.put(`/api/v1/problem`, {problem,preferredHelperSkills}, config);
 
     dispatch({ type: CREATE_PROBLEM_SUCCESS ,payload: data.success });
     dispatch(loadUser());
@@ -307,7 +307,7 @@ export const createProblem = (problem,preferredHelperSkills) => async (dispatch)
 //Delete Problem
 export const deleteProblem = (problemId)=>async(dispatch)=>{
   try{
-      const {data}=await axios.delete(`/api/v1/problem?problemId=${problemId}`);
+      const {data}=await api.delete(`/api/v1/problem?problemId=${problemId}`);
 
   dispatch({ type: DELETE_PROBLEM_SUCCESS,payload: data.message});
 
@@ -326,7 +326,7 @@ export const deleteProblem = (problemId)=>async(dispatch)=>{
 //change status
 export const changeStatus = (problemId)=>async(dispatch)=>{
   try{
-      const {data}=await axios.put(`/api/v1/problem/status?problemId=${problemId}`);
+      const {data}=await api.put(`/api/v1/problem/status?problemId=${problemId}`);
 
   dispatch({ type: CHANGE_PROBLEM_STATUS_SUCCESS,payload: data.message});
 
@@ -352,7 +352,7 @@ export const addSkill = ({skills,availability}) => async (dispatch) => {
         'Content-Type': 'application/json'
       }
     };
-    const { data } = await axios.put('/api/v1/skill', { skills ,availability}, config);
+    const { data } = await api.put('/api/v1/skill', { skills ,availability}, config);
 
     dispatch({
       type: ADD_SKILL_SUCCESS,
@@ -375,7 +375,7 @@ export const getNearbyUsers = (longitude,latitude, skills) => async (dispatch) =
     dispatch({ type: NEARBY_USER_REQUEST });
 
     const config = { headers: { 'Content-Type': 'application/json',  },};
-    const { data } = await axios.post('/api/v1/nearby', {longitude,latitude, skills }, config);
+    const { data } = await api.post('/api/v1/nearby', {longitude,latitude, skills }, config);
 
     dispatch({
       type: NEARBY_USER_SUCCESS,
@@ -397,7 +397,7 @@ export const getNearbyUsersSeekers = (longitude,latitude, skills) => async (disp
     
     const config = { headers: { 'Content-Type': 'application/json'  }};
 
-    const { data } = await axios.post('/api/v1/nearbySeekers', {longitude,latitude, skills }, config);
+    const { data } = await api.post('/api/v1/nearbySeekers', {longitude,latitude, skills }, config);
 
     dispatch({
       type: NEARBY_USER_SUCCESS,
@@ -420,7 +420,7 @@ export const createReview = (rating,comment,helperId) => async (dispatch) => {
 
     const config = {headers: {'Content-Type': 'application/json',},};
 
-    const { data } = await axios.put('/api/v1/review', {rating,comment,helperId}, config);
+    const { data } = await api.put('/api/v1/review', {rating,comment,helperId}, config);
 
     dispatch({ type: CREATE_REVIEW_SUCCESS, payload: data.success, });
   } catch (error) {
@@ -439,7 +439,7 @@ export const applyForProblem = (curUserID, userId, problemId) => async (dispatch
     dispatch({ type: APPLY_PROBLEM_REQUEST });
 
     const config = { headers: { 'Content-Type': 'application/json' } };
-    const { data } = await axios.post('/api/v1/problem/apply', { curUserID, userId, problemId }, config);
+    const { data } = await api.post('/api/v1/problem/apply', { curUserID, userId, problemId }, config);
 
     dispatch({
       type: APPLY_PROBLEM_SUCCESS,
@@ -463,7 +463,7 @@ export const getUserProblemDetails = (userId, problemId) => async (dispatch) => 
     dispatch({ type: GET_USER_PROBLEM_DETAILS_REQUEST });
     const config = { headers: { 'Content-Type': 'application/json' } };
 
-    const { data } = await axios.post(`/api/v1/application`,{userId, problemId},config);
+    const { data } = await api.post(`/api/v1/application`,{userId, problemId},config);
 
     if (data.application) {
       dispatch({
@@ -490,7 +490,7 @@ export const addNotification = (seekerId, problemId,type) => async (dispatch) =>
     dispatch({ type: ADD_NOTIFICATION_REQUEST });
 
     const config = {headers: { 'Content-Type': 'application/json',}};
-    const { data } = await axios.post('/api/v1/notification', { seekerId, problemId,type }, config);
+    const { data } = await api.post('/api/v1/notification', { seekerId, problemId,type }, config);
     dispatch({
       type: ADD_NOTIFICATION_SUCCESS,
       payload: data.message,
@@ -509,7 +509,7 @@ export const addNotificationHelper = (helperId, problemId,type) => async (dispat
     dispatch({ type: ADD_NOTIFICATION_REQUEST });
 
     const config = {headers: { 'Content-Type': 'application/json',}};
-    const { data } = await axios.post('/api/v1/notification-helper', { helperId, problemId ,type}, config);
+    const { data } = await api.post('/api/v1/notification-helper', { helperId, problemId ,type}, config);
     dispatch({
       type: ADD_NOTIFICATION_SUCCESS,
       payload: data.message,
@@ -527,7 +527,7 @@ export const fetchNotifications = () => async (dispatch) => {
   try {
     dispatch({ type: FETCH_NOTIFICATIONS_REQUEST });
 
-    const { data } = await axios.get(`/api/v1/notifications`);
+    const { data } = await api.get(`/api/v1/notifications`);
 
     dispatch({
       type: FETCH_NOTIFICATIONS_SUCCESS,
@@ -547,7 +547,7 @@ export const rejectNotification = (notificationId) => async (dispatch) => {
     dispatch({ type: REJECT_NOTIFICATION_REQUEST });
     const config = { headers: { 'Content-Type': 'application/json' } };
 
-    await axios.post('/api/v1/notifications/delete', { notificationId }, config);
+    await api.post('/api/v1/notifications/delete', { notificationId }, config);
 
     dispatch({ type: REJECT_NOTIFICATION_SUCCESS });
     dispatch(fetchNotifications())
@@ -568,7 +568,7 @@ export const clearErrors = () => (dispatch) => {
 export const getAllUsers = () => async (dispatch) => {
   try {
     dispatch({ type: ALL_USERS_REQUEST });
-    const { data } = await axios.get(`/api/v1/admin/users`);
+    const { data } = await api.get(`/api/v1/admin/users`);
 
     dispatch({ type: ALL_USERS_SUCCESS, payload: data.users });
   } catch (error) {
@@ -580,7 +580,7 @@ export const getAllUsers = () => async (dispatch) => {
 export const getUserDetails = (id) => async (dispatch) => {
   try {
     dispatch({ type: USER_DETAILS_REQUEST });
-    const { data } = await axios.get(`/api/v1/admin/user/${id}`);
+    const { data } = await api.get(`/api/v1/admin/user/${id}`);
 
     dispatch({ type: USER_DETAILS_SUCCESS, payload: data.user });
   } catch (error) {
@@ -593,7 +593,7 @@ export const deleteUser = (id) => async (dispatch) => {
   try {
     dispatch({ type: DELETE_USER_REQUEST });
 
-    const { data } = await axios.delete(`/api/v1/admin/user/${id}`);
+    const { data } = await api.delete(`/api/v1/admin/user/${id}`);
 
     dispatch({ type: DELETE_USER_SUCCESS, payload: data });
   } catch (error) {
@@ -611,7 +611,7 @@ export const updateUser = (id, userData) => async (dispatch) => {
 
     const config = { headers: { "Content-Type": "application/json" } };
 
-    const { data } = await axios.put(
+    const { data } = await api.put(
       `/api/v1/admin/user/${id}`,
       userData,
       config
