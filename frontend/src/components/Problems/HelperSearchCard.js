@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './HelperSearchCard.css';
 import Rating from '@mui/material/Rating';
-import { useDispatch, useSelector } from 'react-redux';
-import { addNotificationHelper, clearErrors } from '../../actions/userActions';
+import { useDispatch } from 'react-redux';
+import { addNotificationHelper } from '../../actions/userActions';
 
 const HelperSearchCard = ({ user, problemId }) => {
   const dispatch = useDispatch();
