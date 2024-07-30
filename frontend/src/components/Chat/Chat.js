@@ -7,7 +7,9 @@ import './Chat.css';
 import Sidebar from "../Layout/Sidebar";
 import { Link, useParams } from 'react-router-dom';
 
-const socket = io(`${window.location.protocol}//${window.location.host}`);
+const socket = io(`${window.location.protocol}//${window.location.hostname}`, {
+  withCredentials: true
+});
 
 const Chat = () => {
   const {id}=useParams();
