@@ -16,6 +16,7 @@ const corsOptions = {
   origin: "https://aidbridgemernproject-frontend.onrender.com",
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
+  exposedHeaders: ["set-cookie"]
 };
 
 app.use(cors(corsOptions));
