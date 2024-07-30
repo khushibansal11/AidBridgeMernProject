@@ -1,5 +1,4 @@
 import axios from 'axios';
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "http://localhost:4000";
 import {
   REGISTER_REQUEST,
   REGISTER_SUCCESS,
@@ -74,8 +73,10 @@ import {
   USER_DETAILS_REQUEST,
   USER_DETAILS_SUCCESS,
   USER_DETAILS_FAIL,
-
+  
 } from '../constants/userConstants.js';
+
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "http://localhost:4000";
 
 // Register
 export const register = (userData) => async (dispatch) => {
