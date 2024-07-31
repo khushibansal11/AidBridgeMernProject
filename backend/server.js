@@ -40,12 +40,13 @@ const io = socketIo(server, {
 
 // Socket.IO connection handling
 io.on('connection', (socket) => {
-
+    console.log("connection established")
     socket.on('joinChat', (chatId) => {
         socket.join(chatId);
     });
 
     socket.on('sendMessage', async (message) => {
+        console.log("sending message")
         const { chatId, text, sender } = message;
         
         const chat = await Chat.findById(chatId);
