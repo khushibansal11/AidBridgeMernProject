@@ -7,7 +7,7 @@ import './Chat.css';
 import Sidebar from "../Layout/Sidebar";
 import { Link, useParams } from 'react-router-dom';
 
-const socket = io('https://aidbridgemernproject-frontend.onrender.com', {
+const socket = io('https://aidbridgemernproject.onrender.com', {
   withCredentials: true
 });
 
