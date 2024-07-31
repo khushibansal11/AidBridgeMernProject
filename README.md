@@ -2,6 +2,8 @@
 
 AidBridge is a platform designed to connect people in need (Seekers) with those who can help (Helpers). It aims to foster community support by matching seekers with helpers based on specific skills and needs.
 
+This site is live on: https://aidbridgemernproject-frontend.onrender.com
+
 ## Table of Contents
 
 - [Features](#features)
